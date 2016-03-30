@@ -35,6 +35,10 @@ and open the template in the editor.
 
 #footer{
     background-color: #131313;
+    border-style: solid;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
     
 }
 
@@ -47,4 +51,10 @@ and open the template in the editor.
 
 #title1{
     font-family: 'Dosis', sans-serif;
+}
+
+.footer{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
 }
