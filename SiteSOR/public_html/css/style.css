@@ -17,7 +17,6 @@ and open the template in the editor.
 #principalTitle{
     color: #d58512;
     font-family: 'Lobster', sans-serif;
-    
 }
 
 #oi{
@@ -58,3 +57,10 @@ and open the template in the editor.
     margin-top: 20px;
     
 }
+
+#logo{
+    border: #d58512;
+    border-style: solid;
+    border-radius: 10px;
+}
+
