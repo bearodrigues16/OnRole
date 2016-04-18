@@ -21,15 +21,12 @@ and open the template in the editor.
 
 #oi{
      padding-right: 0px;
-     
     
 }
 
 #content{
-    background-color:  	#5C3317 ;
-    padding: 30px;
-    
-    
+    background-color:  	#742C05 ;
+    padding: 30px 90px 30px 90px;    
 }
 
 #footer{
@@ -63,4 +60,3 @@ and open the template in the editor.
     border-style: solid;
     border-radius: 10px;
 }
-
