@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Search on Role</string>
+
+    <string name="action_settings">Configurações</string>
+
+    <string name="button_meus_roles">Meus Rolês</string>
+    <string name="button_organizacao">Organização</string>
+    <string name="button_servicos">Serviços</string>
+    <string name="button_minha_carteira">Minha Carteira</string>
+    <string name="button_configuracoes">Configurações</string>
+    <string name="button_cadastrar_role">Cadatrar Rolê</string>
+    <string name="button_editar_role">Editar Rolê</string>
+    <string name="button_excluir_role">Excluir Rolê</string>
+
+    <string name="title_activity_meus_roles">Meus Rolês</string>
+    <string name="title_activity_organizacao">Organizacão</string>
+    <string name="title_activity_servicos">Serviços</string>
+    <string name="title_activity_minha_carteira">Minha Carteira</string>
+    <string name="title_activity_configuracoes">Configurações</string> <!-- REVER -->
+</resources>
