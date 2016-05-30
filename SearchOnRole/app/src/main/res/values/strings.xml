@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">SearchOnRole</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Search on Role</string>
+
+    <string name="action_settings">Configurações</string>
+
+    <string name="meus_roles">Meus Rolês</string>
+    <string name="organizacao">Organização</string>
+    <string name="servicos">Serviços</string>
+    <string name="minha_carteira">Minha Carteira</string>
+    <string name="login">Login</string>
+    <string name="cadastrar_role">Cadatrar Rolê</string>
+    <string name="editar_role">Editar Rolê</string>
+    <string name="excluir_role">Excluir Rolê</string>
+    <string name="todos_roles">Rolês</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
 </resources>
