@@ -10,19 +10,19 @@ public class Role {
     private float custo;
     private String descricao;
     private String local;
-    private String /*[]*/ bebidas;
+    private String origID;
 
     public Role () {
 
     }
 
-    public Role (String nome, String data, float custo, String Descricao, String local, String /*[]*/ bebidas) {
+    public Role (String nome, String data, float custo, String descricao, String local) {
         this.nome = nome;
         this.data = data;
         this.custo = custo;
         this.descricao = descricao;
         this.local = local;
-        this.bebidas = bebidas;
+        this.origID = LoginActivity.getId();
     }
 
     public int getId() {
@@ -73,11 +73,11 @@ public class Role {
         this.local = local;
     }
 
-    public String/*[]*/ getBebidas() {
-        return bebidas;
+    public String getOrigID() {
+        return origID;
     }
 
-    public void setBebidas(String/*[]*/ bebidas) {
-        this.bebidas = bebidas;
+    public void setOrigID(String origID) {
+        this.origID = origID;
     }
 }

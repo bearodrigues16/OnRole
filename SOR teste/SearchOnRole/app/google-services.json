@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "195211464425",
+    "firebase_url": "https://searchonrole.firebaseio.com",
+    "project_id": "searchonrole",
+    "storage_bucket": "searchonrole.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195211464425:android:75f976b6e91fdf6c",
+        "android_client_info": {
+          "package_name": "u.a.r.g.searchonrole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195211464425-0f2dpok9efcpc15c2r1ol5rl434qel6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvG9j5cHXkL5Q25YaQ5-bG5T1w6MWr77M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

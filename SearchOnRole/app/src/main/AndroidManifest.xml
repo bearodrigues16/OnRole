@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="u.a.r.g.searchonrole">
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             5
@@ -27,41 +29,34 @@
             android:name=".MeusRolesActivity"
             android:label="@string/meus_roles"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
+
+            <!--
+                <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.MainActivity" />
-        </activity>
-        <activity
-            android:name=".OrganizacaoActivity"
-            android:label="@string/organizacao"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.MainActivity" />
-        </activity>
-        <activity
-            android:name=".ServicosActivity"
-            android:label="@string/servicos"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.MainActivity" />
+                android:value="u.a.r.g.searchonrole.LoginActivity" />
+            -->
         </activity>
         <activity
             android:name=".MinhaCarteiraActivity"
             android:label="@string/minha_carteira"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
+
+            <!--
+                <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="u.a.r.g.searchonrole.MainActivity" />
+            -->
         </activity>
         <activity
             android:name=".CadastrarRoleActivity"
             android:label="@string/cadastrar_role"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
+
+            <!--
+                <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.OrganizacaoActivity" />
+                android:value="u.a.r.g.searchonrole.MeusRolesActivity" />
+            -->
         </activity>
         <activity
             android:name=".EditarRoleActivity"
@@ -69,27 +64,46 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.OrganizacaoActivity" />
-        </activity>
-        <activity
-            android:name=".ExcluirRoleActivity"
-            android:label="@string/excluir_role"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="u.a.r.g.searchonrole.OrganizacaoActivity" />
+                android:value="u.a.r.g.searchonrole.RoleActivity" />
         </activity>
         <activity
             android:name=".TodosRolesActivity"
             android:label="@string/todos_roles"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
+
+            <!--
+                <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="u.a.r.g.searchonrole.MeusRolesActivity" />
+            -->
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:name=".RoleActivity"
+            android:label="@string/title_activity_role"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".RegistroActivity"
+            android:label="@string/title_activity_registro"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+                <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="u.a.r.g.searchonrole.LoginActivity" />
+            -->
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".EditarUsuarioActivity"
+            android:label="@string/title_activity_editar_usuario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

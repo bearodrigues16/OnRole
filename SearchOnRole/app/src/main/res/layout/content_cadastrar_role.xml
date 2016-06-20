@@ -10,122 +10,119 @@
     tools:showIn="@layout/activity_cadastrar_role"
     tools:context="u.a.r.g.searchonrole.CadastrarRoleActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nome do Rolê"
-        android:textSize="40sp"
-        android:id="@+id/EDtituloRole" />
-
-    <EditText
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/EDdata"
-        android:layout_below="@+id/EDtituloRole"
-        android:layout_alignRight="@+id/EDtituloRole"
-        android:layout_alignEnd="@+id/EDtituloRole" />
+        android:id="@+id/scrollView" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Data:"
-        android:id="@+id/TVdata"
-        android:layout_above="@+id/EDcusto"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Custo:"
-        android:id="@+id/TVcusto"
-        android:layout_alignBottom="@+id/EDcusto"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Rolê"
+                android:maxLength="99"
+                android:textSize="40sp"
+                android:id="@+id/EDtituloRole"
+                android:singleLine="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Local:"
-        android:id="@+id/TVlocal"
-        android:layout_alignBottom="@+id/EDlocal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/EDdata"
+                android:layout_below="@+id/EDtituloRole"
+                android:layout_alignRight="@+id/EDtituloRole"
+                android:layout_alignEnd="@+id/EDtituloRole"
+                android:layout_alignLeft="@+id/button_cadastrar"
+                android:layout_alignStart="@+id/button_cadastrar" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/EDcusto"
-        android:layout_below="@+id/EDdata"
-        android:layout_alignRight="@+id/EDdata"
-        android:layout_alignEnd="@+id/EDdata"
-        android:layout_alignLeft="@+id/EDdata"
-        android:layout_alignStart="@+id/EDdata" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Data:"
+                android:id="@+id/TVdata"
+                android:layout_above="@+id/EDcusto"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/EDlocal"
-        android:layout_below="@+id/EDdescricao"
-        android:layout_alignLeft="@+id/EDdescricao"
-        android:layout_alignStart="@+id/EDdescricao"
-        android:layout_alignRight="@+id/EDdescricao"
-        android:layout_alignEnd="@+id/EDdescricao" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Custo:"
+                android:id="@+id/TVcusto"
+                android:layout_alignBottom="@+id/EDcusto"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bebidas:"
-        android:id="@+id/TVbebidas"
-        android:layout_alignBottom="@+id/EDbebidas"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Local:"
+                android:id="@+id/TVlocal"
+                android:layout_alignBottom="@+id/EDlocal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/EDbebidas"
-        android:layout_below="@+id/EDlocal"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/EDlocal"
-        android:layout_alignStart="@+id/EDlocal" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/EDcusto"
+                android:layout_below="@+id/EDdata"
+                android:layout_alignRight="@+id/EDdata"
+                android:layout_alignEnd="@+id/EDdata"
+                android:layout_alignLeft="@+id/EDdata"
+                android:layout_alignStart="@+id/EDdata" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CADASTRAR"
-        android:id="@+id/button_cadastrar"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/EDbebidas"
-        android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Descrição:"
+                android:id="@+id/TVdescricao"
+                android:layout_alignTop="@+id/EDdescricao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="18dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Descrição:"
-        android:id="@+id/TVdescricao"
-        android:layout_above="@+id/EDlocal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CADASTRAR"
+                android:id="@+id/button_cadastrar"
+                android:layout_marginTop="49dp"
+                android:layout_below="@+id/EDdescricao"
+                android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/EDdescricao"
-        android:layout_below="@+id/EDcusto"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/EDcusto"
-        android:layout_alignStart="@+id/EDcusto" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EDlocal"
+                android:layout_below="@+id/TVcusto"
+                android:layout_alignLeft="@+id/EDcusto"
+                android:layout_alignStart="@+id/EDcusto"
+                android:layout_alignRight="@+id/EDcusto"
+                android:layout_alignEnd="@+id/EDcusto"
+                android:singleLine="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EDdescricao"
+                android:layout_below="@+id/EDlocal"
+                android:layout_alignLeft="@+id/EDlocal"
+                android:layout_alignStart="@+id/EDlocal"
+                android:layout_alignRight="@+id/EDlocal"
+                android:layout_alignEnd="@+id/EDlocal"
+                android:lines="5"/>
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

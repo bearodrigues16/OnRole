@@ -22,10 +22,19 @@ public class BancoRoles extends SQLiteOpenHelper {
     private static final String CUSTO = "custo";
     private static final String DESCRICAO = "descricao";
     private static final String LOCAL = "local";
-    private static final String BEBIDAS = "bebidas";
+    private static final String ORIGID = "origID";
     private static final int VERSAO = 1;
 
-    public BancoRoles(Context context){
+    private static BancoRoles instance;
+
+    public static synchronized BancoRoles getInstance(Context context) {
+        if (instance == null) {
+            instance = new BancoRoles(context);
+        }
+        return instance;
+    }
+
+    private BancoRoles(Context context) {
         super(context, NOME_BANCO, null, VERSAO);
     }
 
@@ -39,7 +48,7 @@ public class BancoRoles extends SQLiteOpenHelper {
                 + CUSTO + " custo,"
                 + DESCRICAO + " descricao,"
                 + LOCAL + " local,"
-                + BEBIDAS + " bebidas"
+                + ORIGID + " origID"
                 + ")";
         db.execSQL(sql);
     }
@@ -50,7 +59,7 @@ public class BancoRoles extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public String insereRole(Role role){
+    public String insereRole(Role role) {
         long resultado;
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -60,14 +69,13 @@ public class BancoRoles extends SQLiteOpenHelper {
         valores.put(CUSTO, role.getCusto());
         valores.put(DESCRICAO, role.getDescricao());
         valores.put(LOCAL, role.getLocal());
-        //for(String bebida : role.getBebidas()) {
-            valores.put(BEBIDAS, role.getBebidas());
-        //}
+        valores.put(ORIGID, LoginActivity.getId());
 
         resultado = db.insert(TABELA, null, valores);
         db.close();
 
-        if (resultado ==-1) {
+
+        if (resultado == -1) {
             return "Erro ao cadastrar rolê";
         } else {
             return "Rolê Cadastrado com sucesso";
@@ -90,13 +98,52 @@ public class BancoRoles extends SQLiteOpenHelper {
                 role.setCusto(Float.parseFloat(cursor.getString(3)));
                 role.setDescricao(cursor.getString(4));
                 role.setLocal(cursor.getString(5));
-                role.setBebidas(cursor.getString(6));
+                //role.setOrigID(Integer.parseInt(cursor.getString(6)));
                 // Adding contact to list
                 roleList.add(role);
             } while (cursor.moveToNext());
         }
         // return contact list
         return roleList;
+    }
+
+    public String editarRole(Role role) {
+        long resultado;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(NOME, role.getNome());
+        values.put(DATA, role.getData());
+        values.put(CUSTO, role.getCusto());
+        values.put(DESCRICAO, role.getDescricao());
+        values.put(LOCAL, role.getLocal());
+        // updating row
+
+        resultado = db.update(TABELA, values, ID + " = ?",
+                new String[]{String.valueOf(role.getId())});
+        db.close();
+
+        if (resultado == -1) {
+            return "Erro ao editar rolê";
+        } else {
+            return "Rolê editado com sucesso";
+        }
+    }
+
+    public String excluirRole(Role role) {
+        long resultado;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        resultado = db.delete(TABELA, ID + " = ?",
+                new String[]{String.valueOf(role.getId())});
+        db.close();
+
+        if (resultado == -1) {
+            return "Erro ao excluir Rolê";
+        } else {
+            return "Rolê excluído com sucesso";
+        }
     }
 
     public int getRolesCount() {
